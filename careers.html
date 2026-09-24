@@ -93,6 +93,18 @@
   .pace-col:hover .pb{opacity:.8}
   .pace-mon{height:24px;line-height:24px;font-family:'Space Mono';font-size:16px;color:var(--sand);text-transform:uppercase;letter-spacing:.04em}
   .pace-caption{margin-top:18px;font-size:17px;color:var(--sand)}
+  .pace-summary{display:flex;align-items:center;justify-content:center;gap:28px;flex-wrap:wrap;margin-top:40px;padding:30px 32px;background:var(--panel);border:1px solid var(--line);border-radius:8px;text-align:center}
+  .ps-item{min-width:0}
+  .ps-lbl{font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--sand)}
+  .ps-num{font-family:'Instrument Serif';font-style:italic;font-size:48px;line-height:1.1;color:var(--paper);margin-top:6px}
+  .ps-num.accent{color:var(--copper)}
+  .ps-sub{font-size:15px;color:var(--sand);margin-top:4px}
+  .ps-op{font-family:'Instrument Serif';font-size:40px;color:var(--copper);line-height:1}
+  .pace-summary-note{margin-top:16px;font-size:17px;color:var(--sand);text-align:center}
+  @media (max-width:640px){
+    .pace-summary{flex-direction:column;gap:14px;padding:26px 20px}
+    .ps-num{font-size:40px}
+  }
   @media (max-width:640px){
     .pace-val{font-size:14px}
     .pace-mon{font-size:12px}
@@ -414,6 +426,20 @@
       </div>
     </div>
     <p class="pace-caption" id="paceCaption">Real 2025 numbers — each bar is that month&#8217;s actual bonus.</p>
+    <div class="pace-summary">
+      <div class="ps-item">
+        <div class="ps-lbl">Average in 2025</div>
+        <div class="ps-num">107.2%</div>
+        <div class="ps-sub">of base pay, every month</div>
+      </div>
+      <div class="ps-op" aria-hidden="true">&times; 12 =</div>
+      <div class="ps-item">
+        <div class="ps-lbl">Full year</div>
+        <div class="ps-num accent">12.8 months</div>
+        <div class="ps-sub">of bonus</div>
+      </div>
+    </div>
+    <p class="pace-summary-note">In other words, a 12.8-month bonus &mdash; paid out monthly instead of in one lump sum. Here&#8217;s how that&#8217;s grown:</p>
    </div>
    <div style="max-width:680px;margin:0 auto">
     <div class="track-labels" style="grid-template-columns:repeat(3,1fr);margin-top:36px">
