@@ -269,6 +269,16 @@
     .how-grid,.last-grid{grid-template-columns:1fr}
     .last-card{padding:32px 24px}
   }
+
+  /* blinking peak on the bonus chart */
+  .track-svg{overflow:visible}
+  .track-pulse{fill:var(--copper);transform-box:fill-box;transform-origin:center;animation:peakPulse 1.8s ease-out infinite}
+  .dot-peak{fill:var(--copper);stroke-dasharray:none;animation:peakBlink 1.8s ease-in-out infinite}
+  .track-label .projected-label{animation:peakText 1.8s ease-in-out infinite}
+  @keyframes peakPulse{0%{transform:scale(1);opacity:.7}100%{transform:scale(4.5);opacity:0}}
+  @keyframes peakBlink{0%,100%{opacity:1}50%{opacity:.35}}
+  @keyframes peakText{0%,100%{opacity:1;text-shadow:0 0 0 rgba(237,185,90,0)}50%{opacity:.75;text-shadow:0 0 18px rgba(237,185,90,.6)}}
+  @media (prefers-reduced-motion:reduce){.track-pulse,.dot-peak,.track-label .projected-label{animation:none}.track-pulse{opacity:0}}
 </style>
 </head>
 <body>
@@ -432,7 +442,8 @@
         <circle cx="80" cy="142" r="5" class="track-dot"/>
         <circle cx="240" cy="136" r="5" class="track-dot"/>
         <circle cx="400" cy="98" r="6" class="track-dot dot-highlight"/>
-        <circle cx="560" cy="14" r="5" class="track-dot dot-projected"/>
+        <circle cx="560" cy="14" r="5" class="track-pulse"/>
+        <circle cx="560" cy="14" r="5" class="track-dot dot-projected dot-peak"/>
       </svg>
       <div class="track-labels">
         <div class="track-label"><div class="tval"><span class="count" data-target="7.2" data-decimals="1" data-suffix=" months">0 months</span></div><div class="tyr">2023</div></div>
