@@ -304,6 +304,15 @@
   .pace-val,.pace-mon{font-variant-numeric:tabular-nums;font-weight:600}
   .stat-hero .num,.stat-row2 .num,.track-label .tval,.ps-num,.vcard .bignum,.bar .num{font-weight:700}
   .ps-op{font-weight:600}
+
+  /* brand blue splash — taken from the office wall graphic */
+  :root{--splash:#0A80BF}
+  .section-title{position:relative;z-index:0;isolation:isolate}
+  .section-title::before{content:'';position:absolute;z-index:-1;left:-.32em;top:-.22em;width:1.3em;height:1.3em;border-radius:50%;background:var(--splash);opacity:.9}
+  section{position:relative}
+  #values,#bonus,#faq,#trips,#contact,#life{background-image:radial-gradient(ellipse 55% 45% at 100% 0%, rgba(10,128,191,.20), transparent 70%),radial-gradient(ellipse 45% 40% at 0% 100%, rgba(10,128,191,.12), transparent 70%)}
+  .vcard .bignum{color:rgba(10,128,191,.35)}
+  .vcard:hover .bignum{color:rgba(10,128,191,.6)}
 </style>
 
 </head>
