@@ -235,6 +235,40 @@
   .vcard .bignum{color:rgba(10,128,191,.35)}
   .vcard:hover .bignum{color:rgba(10,128,191,.6)}
   .careers a{background:rgba(11,32,54,.6);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+
+  /* partner-facing sections: story, how we work, built to last */
+  .hero h1{font-size:clamp(34px,5vw,60px);line-height:1;max-width:18ch;text-shadow:0 2px 14px rgba(0,0,0,.45)}
+  .story-intro{color:var(--sand);font-size:20px;max-width:56ch;margin:-12px 0 48px}
+  .story-list{display:grid;grid-template-columns:repeat(4,1fr);gap:0;list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+  .story-list li{position:relative;padding:34px 28px 0 0}
+  .story-list li::before{content:'';position:absolute;top:-6px;left:0;width:11px;height:11px;border-radius:50%;background:var(--copper)}
+  .story-list li:last-child::before{background:var(--splash);box-shadow:0 0 0 5px rgba(10,128,191,.25)}
+  .story-when{font-family:'Barlow Condensed';font-weight:700;text-transform:uppercase;letter-spacing:.04em;font-size:15px;color:var(--copper)}
+  .story-what{font-weight:600;font-size:22px;margin-top:6px;line-height:1.3}
+  .story-desc{color:var(--sand);font-size:17px;margin-top:10px}
+  .how-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:8px}
+  .how-grid .vcard .bignum{font-size:96px}
+  .pull{margin:56px 0 0;padding:0 0 0 24px;border-left:2px solid var(--copper);max-width:46ch}
+  .pull p{margin:0;font-family:'Barlow Condensed';font-weight:600;font-size:clamp(24px,2.6vw,32px);line-height:1.2;color:var(--paper)}
+  .pull cite{display:block;margin-top:12px;font-style:normal;font-size:14px;color:var(--sand);letter-spacing:.04em;text-transform:uppercase}
+  .last-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+  .last-card{background:var(--panel);border:1px solid var(--line);padding:44px 40px}
+  .last-card h3{margin:0;font-family:'Barlow Condensed';font-weight:700;text-transform:uppercase;font-size:32px;line-height:1.05;letter-spacing:.01em}
+  .last-card p{color:var(--sand);font-size:18px;margin:16px 0 0}
+  .last-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px;padding:0;list-style:none}
+  .last-tags li{border:1px solid rgba(237,185,90,.55);color:var(--copper);font-size:13px;padding:5px 12px;border-radius:100px}
+  #story,#how,#built{background-image:radial-gradient(ellipse 55% 45% at 100% 0%, rgba(10,128,191,.11), transparent 70%),radial-gradient(ellipse 45% 40% at 0% 100%, rgba(10,128,191,.06), transparent 70%)}
+  @media (max-width:900px){
+    .story-list{grid-template-columns:1fr 1fr;row-gap:44px}
+  }
+  @media (max-width:760px){
+    .wrap{padding:0 16px}
+    .story-list{grid-template-columns:1fr;border-top:none;border-left:1px solid var(--line);row-gap:32px;margin-left:5px}
+    .story-list li{padding:0 0 0 24px}
+    .story-list li::before{top:8px;left:-6px}
+    .how-grid,.last-grid{grid-template-columns:1fr}
+    .last-card{padding:32px 24px}
+  }
 </style>
 </head>
 <body>
@@ -244,6 +278,8 @@
     <div class="mark">Forward Pace.</div>
     <div class="navlinks">
       <a href="#hero">About</a>
+      <a href="#story">Story</a>
+      <a href="#how">How we work</a>
       <a href="#values">Values</a>
       <a href="#life">Life here</a>
       <a href="#faq">FAQ</a>
@@ -257,12 +293,96 @@
   </div>
   <div class="hero-overlay"></div>
   <div class="wrap hero-inner">
+    <h1>Among the best in the world in e&#8209;commerce.</h1>
     <p>An e-commerce company focused on building digitally native brands that cater to global audiences, delivering innovative, high-quality products designed for modern consumers everywhere.</p>
     <p style="margin-top:14px">Our brands are designed specifically for the North American and European markets, with a dedicated focus on outdoor recreation and active apparel.</p>
   </div>
 </header>
 
-<section id="values">
+<section id="story">
+  <div class="wrap">
+    <div class="section-title">Our story.</div>
+    <p class="story-intro">A small team from Petaling Jaya, building direct-to-consumer brands to a global standard, one small improvement at a time.</p>
+    <ol class="story-list">
+      <li>
+        <div class="story-when">Where it began</div>
+        <div class="story-what">A few desks in a co-working space</div>
+        <div class="story-desc">We started out in Sandbox, a shared co-working space, where every decision was a bet we couldn't afford to lose. That's where we learned to think before we spend.</div>
+      </li>
+      <li>
+        <div class="story-when">2021</div>
+        <div class="story-what">Narratives, not slide decks</div>
+        <div class="story-desc">We retired PowerPoint. Ideas are now written out in full, read in silence, then debated in the room.</div>
+      </li>
+      <li>
+        <div class="story-when">The shake-out</div>
+        <div class="story-what">Still standing when others weren't</div>
+        <div class="story-desc">Privacy changes and rising ad costs pushed many brands in our space out. We came through by getting measurably better, month after month.</div>
+      </li>
+      <li>
+        <div class="story-when">Today</div>
+        <div class="story-what">A home built for the long run</div>
+        <div class="story-desc">Our own office in Uptown 3, chosen on a five-year-plus horizon, and a team focused on mastering its craft.</div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section id="how" style="padding-top:0">
+  <div class="wrap">
+    <div class="section-title">How we work.</div>
+    <div class="how-grid">
+      <div class="vcard">
+        <span class="bignum">01</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9Z"/><polyline points="14 3 14 9 20 9"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="13" y2="17"/></svg>
+        <div class="vtitle2">Narratives, not slide decks</div>
+        <div class="vdesc2">Every proposal is written out with its reasoning and data, read in silence at the start of the meeting, then debated. People read three times faster than a presenter can speak.</div>
+      </div>
+      <div class="vcard">
+        <span class="bignum">02</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v3M4 8h16M6 8l-3 6a3 3 0 0 0 6 0l-3-6ZM18 8l-3 6a3 3 0 0 0 6 0l-3-6Z"/></svg>
+        <div class="vtitle2">Every decision is a bet</div>
+        <div class="vdesc2">We list the arguments for and against, weigh them honestly, and size the bet to the evidence. The bigger the bet, the stronger the case has to be.</div>
+      </div>
+      <div class="vcard">
+        <span class="bignum">03</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg>
+        <div class="vtitle2">Focus on what moves the needle</div>
+        <div class="vdesc2">Most of our hours go to breakthrough work, finding the next real improvement, rather than busywork. If something doesn't move us forward, we say no to it.</div>
+      </div>
+      <div class="vcard">
+        <span class="bignum">04</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="7" width="14" height="12" rx="2"/><path d="M12 7V3"/><circle cx="12" cy="3" r="1"/><circle cx="9.5" cy="12.5" r="1"/><circle cx="14.5" cy="12.5" r="1"/><path d="M9.5 16h5"/><path d="M2 12v3M22 12v3"/></svg>
+        <div class="vtitle2">AI in every team</div>
+        <div class="vdesc2">AI is built into how every team works. We use it to make each person on the team dramatically more capable. It replaces busywork, not people.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="built" style="padding-top:0">
+  <div class="wrap">
+    <div class="section-title">Built to last. Small on purpose.</div>
+    <div class="last-grid">
+      <div class="last-card">
+        <h3>Built for the long run</h3>
+        <p>We're bootstrapped, with no outside investors and no loans. We grow steadily instead of chasing hypergrowth, and we keep a close eye on fixed costs so we can weather any cycle. For our partners, that means a counterparty that will still be here years from now.</p>
+        <ul class="last-tags"><li>Bootstrapped</li><li>Debt-free</li><li>Five-year-plus horizon</li></ul>
+      </div>
+      <div class="last-card">
+        <h3>Small team, big leverage</h3>
+        <p>We stay deliberately lean. We hire for drive and work ethic, many of us straight out of university, and coach each person toward the top 1% of their craft. Partners work directly with the people who make the decisions, not through layers.</p>
+        <ul class="last-tags"><li>Lean by design</li><li>Direct access to decision-makers</li><li>Trained in-house</li></ul>
+      </div>
+    </div>
+    <blockquote class="pull">
+      <p>&ldquo;I no longer see large team size as part of business success. If anything, I take pride in small team size.&rdquo;</p>
+      <cite>From our company narratives</cite>
+    </blockquote>
+  </div>
+</section>
+
+<section id="values" style="padding-top:0">
   <div class="wrap">
     <div class="section-title">Our values.</div>
     <div class="values-grid3" id="valuesGrid">
