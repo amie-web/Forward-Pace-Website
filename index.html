@@ -712,7 +712,7 @@
     if (Math.abs(dx) > 40){ dx < 0 ? lifeNext() : lifePrev(); lifeStartAuto(); }
     lifeTouchStartX = null;
   });
-  if (!reduceMotion){ lifeStartAuto(); }
+  if (!reduceMotion){ if ('IntersectionObserver' in window){ var io_lifeSlideshow=new IntersectionObserver(function(es){ if(es[0].isIntersecting){ lifeShow(0); lifeStartAuto(); io_lifeSlideshow.disconnect(); } },{threshold:0.35}); io_lifeSlideshow.observe(lifeSlideshow); } else { lifeStartAuto(); } }
 
   var vcards = Array.prototype.slice.call(document.querySelectorAll('.vcard'));
   if (reduceMotion){
