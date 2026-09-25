@@ -915,7 +915,7 @@
     var paceCaption = document.getElementById('paceCaption');
     var paceCaptions = {
       forward: 'Real 2025 numbers — each bar is that month\u2019s actual bonus.',
-      elsewhere: 'Typical Malaysian employer: about 2.2 months, paid in one lump at year-end (MEF Salary Survey, 2025 average for executives).'
+      elsewhere: 'Typical Malaysian employer: about 2.2 months, paid in one lump at year-end. Source: Malaysian Employers Federation (MEF) Salary Survey 2025, average bonus for executives.'
     };
     var paceBars = Array.prototype.slice.call(document.querySelectorAll('.pace-stage .pb'));
     var paceMax = Math.max.apply(null, paceBars.map(function(b){ return parseFloat(b.getAttribute('data-value')) || 0; }));
