@@ -384,6 +384,9 @@
   @media (max-width:760px){.careers .bg{background-position:18% center}}
   @media (max-width:760px){.hero{height:auto;min-height:0;aspect-ratio:1920/1079}.hero-photo img{object-position:center}}
   .mark{font-family:'Bebas Neue',sans-serif !important;font-weight:400 !important;font-size:24px !important;letter-spacing:.03em !important;line-height:1}
+  .pb-else{background:#4A6FA5}
+  #paceLumpLayer .pace-val{color:#8FB0DA}
+  #paceLumpLayer .pb[data-value="0"]{min-height:0;height:0 !important;border-bottom:2px solid rgba(143,176,218,.35);border-radius:0}
 </style>
 
 </head>
@@ -502,7 +505,7 @@
       <button class="pace-tab" data-mode="elsewhere" type="button">Elsewhere</button>
     </div>
     <div class="pace-stage">
-      <div class="pace-layer" id="paceLumpLayer"><div class="pace-lump"><span class="pace-lump-label">Once a year</span></div></div>
+      <div class="pace-layer" id="paceLumpLayer"><div class="pace-col"><div class="pace-val">&nbsp;</div><div class="pace-bar-track"><div class="pb pb-else" data-value="0"></div></div><div class="pace-mon">Jan</div></div><div class="pace-col"><div class="pace-val">&nbsp;</div><div class="pace-bar-track"><div class="pb pb-else" data-value="0"></div></div><div class="pace-mon">Feb</div></div><div class="pace-col"><div class="pace-val">&nbsp;</div><div class="pace-bar-track"><div class="pb pb-else" data-value="0"></div></div><div class="pace-mon">Mar</div></div><div class="pace-col"><div class="pace-val">&nbsp;</div><div class="pace-bar-track"><div class="pb pb-else" data-value="0"></div></div><div class="pace-mon">Apr</div></div><div class="pace-col"><div class="pace-val">&nbsp;</div><div class="pace-bar-track"><div class="pb pb-else" data-value="0"></div></div><div class="pace-mon">May</div></div><div class="pace-col"><div class="pace-val">&nbsp;</div><div class="pace-bar-track"><div class="pb pb-else" data-value="0"></div></div><div class="pace-mon">Jun</div></div><div class="pace-col"><div class="pace-val">&nbsp;</div><div class="pace-bar-track"><div class="pb pb-else" data-value="0"></div></div><div class="pace-mon">Jul</div></div><div class="pace-col"><div class="pace-val">&nbsp;</div><div class="pace-bar-track"><div class="pb pb-else" data-value="0"></div></div><div class="pace-mon">Aug</div></div><div class="pace-col"><div class="pace-val">&nbsp;</div><div class="pace-bar-track"><div class="pb pb-else" data-value="0"></div></div><div class="pace-mon">Sep</div></div><div class="pace-col"><div class="pace-val">&nbsp;</div><div class="pace-bar-track"><div class="pb pb-else" data-value="0"></div></div><div class="pace-mon">Oct</div></div><div class="pace-col"><div class="pace-val">&nbsp;</div><div class="pace-bar-track"><div class="pb pb-else" data-value="0"></div></div><div class="pace-mon">Nov</div></div><div class="pace-col"><div class="pace-val">217%</div><div class="pace-bar-track"><div class="pb pb-else" data-value="217"></div></div><div class="pace-mon">Dec</div></div></div>
       <div class="pace-layer is-active" id="paceMonthly">
         <div class="pace-col"><div class="pace-val">16.1%</div><div class="pace-bar-track"><div class="pb" data-value="16.1"></div></div><div class="pace-mon">Jan</div></div>
         <div class="pace-col"><div class="pace-val">10.7%</div><div class="pace-bar-track"><div class="pb" data-value="10.7"></div></div><div class="pace-mon">Feb</div></div>
@@ -912,13 +915,13 @@
     var paceCaption = document.getElementById('paceCaption');
     var paceCaptions = {
       forward: 'Real 2025 numbers — each bar is that month\u2019s actual bonus.',
-      elsewhere: 'One lump payment, once a year.'
+      elsewhere: 'Typical Malaysian employer: about 2.2 months, paid in one lump at year-end (MEF Salary Survey, 2025 average for executives).'
     };
-    var paceBars = Array.prototype.slice.call(paceMonthlyLayer.querySelectorAll('.pb'));
+    var paceBars = Array.prototype.slice.call(document.querySelectorAll('.pace-stage .pb'));
     var paceMax = Math.max.apply(null, paceBars.map(function(b){ return parseFloat(b.getAttribute('data-value')) || 0; }));
     paceBars.forEach(function(b){
       var v = parseFloat(b.getAttribute('data-value')) || 0;
-      var pct = paceMax > 0 ? Math.max((v / paceMax) * 100, 6) : 6;
+      var pct = v <= 0 ? 0 : (paceMax > 0 ? Math.max((v / paceMax) * 100, 6) : 6);
       b.style.height = pct + '%';
     });
     paceToggle.querySelectorAll('.pace-tab').forEach(function(tab){
