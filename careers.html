@@ -413,6 +413,14 @@
   .role-grid .role-card .rtitle{margin-bottom:22px}
   .role-grid .role-card .rtitle:has(+ .rsalary){margin-bottom:0}
   @media (max-width:900px){.role-grid{grid-template-columns:1fr}}
+  /* show the whole hero photo on desktop too */
+  @media (min-width:761px){.hero{width:100%;height:auto;min-height:0;aspect-ratio:2000/1125;max-height:calc(100vh - 80px)}.hero-photo img{object-position:center 30%}}
+
+  /* tighter, even section rhythm */
+  section{padding-top:72px !important;padding-bottom:72px !important}
+  .section-title{margin-bottom:28px}
+  #life,#office,#trips{padding-bottom:0 !important}
+  @media (max-width:640px){section{padding-top:52px !important;padding-bottom:52px !important}}
 </style>
 
 </head>
