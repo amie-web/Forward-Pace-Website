@@ -427,6 +427,9 @@
   .hero-headline{position:absolute;left:0;right:0;top:33%;z-index:3;display:flex;justify-content:center;padding:0 20px;pointer-events:none}
   .hero .hero-headline h1{margin:0;max-width:none;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-style:normal;text-transform:uppercase;text-align:center;letter-spacing:.01em;line-height:1.02;color:#0B2036;font-size:clamp(28px,4.4vw,72px);text-shadow:0 0 30px rgba(255,255,255,.7)}
   @media (max-width:760px){.hero-headline{top:31%}.hero .hero-headline h1{font-size:clamp(17px,5.2vw,26px);text-shadow:0 0 14px rgba(255,255,255,.9)}}
+  /* keep titles clear of the sticky menu when jumping to a section */
+  html{scroll-padding-top:68px !important}
+  @media (max-width:760px){html{scroll-padding-top:54px !important}}
 </style>
 
 </head>
