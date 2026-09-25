@@ -388,6 +388,21 @@
   .pb-else{background:#4A6FA5}
   #paceLumpLayer .pace-val{color:#8FB0DA}
   #paceLumpLayer .pb[data-value="0"]{min-height:0;height:0 !important;border-bottom:2px solid rgba(143,176,218,.35);border-radius:0}
+
+  /* job details */
+  .role-more{margin-top:18px;border-top:1px solid var(--line);padding-top:14px}
+  .role-more summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:8px;color:var(--copper);font-weight:600;font-size:15px}
+  .role-more summary::-webkit-details-marker{display:none}
+  .role-more summary svg{width:16px;height:16px;transition:transform .2s ease}
+  .role-more[open] summary svg{transform:rotate(180deg)}
+  .role-more .rm-close{display:none}.role-more[open] .rm-close{display:inline}.role-more[open] .rm-open{display:none}
+  .rm-body{margin-top:8px;max-width:72ch}
+  .rm-lead{color:var(--paper);font-size:16px;margin:12px 0 0}
+  .rm-body h4{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.02em;font-size:20px;color:var(--paper);margin:26px 0 10px}
+  .rm-body ul{margin:0;padding-left:20px;color:var(--sand);font-size:15.5px;line-height:1.65}
+  .rm-body li{margin:0 0 8px}
+  .rm-body li strong{color:var(--paper);font-weight:600}
+  .form-field select{appearance:none;-webkit-appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--sand) 50%),linear-gradient(135deg,var(--sand) 50%,transparent 50%);background-position:calc(100% - 20px) 55%,calc(100% - 14px) 55%;background-size:6px 6px;background-repeat:no-repeat;padding-right:40px}
 </style>
 
 </head>
@@ -739,16 +754,28 @@
     <div class="role-card">
       <div class="rtitle">Creative Content Producer</div>
       <div class="rsalary">RM 3,200 – RM 4,800 / month</div>
-      <div class="rdesc">Lead end-to-end content production for our e-commerce brand — from creative brief to final shoot delivery. Perfect for a proactive planner who thrives balancing creative vision with hands-on execution.</div>
-      <a href="#apply">Apply now</a>
+      <div class="rdesc">We&#8217;re looking for a highly organised, creatively driven Creative Content Producer to lead end-to-end content production for our e-commerce brand in the outdoor camping space. You&#8217;ll manage production schedules, coordinate talent and resources, and turn ideas into clear briefs and scripts &mdash; then plan and run shoots that deliver engaging, high-quality visual content, working closely with our in-house creative and marketing teams.</div>
+      <details class="role-more">
+        <summary><span class="rm-open">See full details</span><span class="rm-close">Hide details</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></summary>
+        <div class="rm-body">
+          <p class="rm-lead">Perfect for a proactive problem-solver who thrives in a fast-paced environment and can balance creative vision with hands-on execution.</p>
+          <h4>What you&#8217;ll do</h4>
+          <ul><li><strong>Manage production timelines</strong> — Own the full production schedule from pre- to post-production, ensuring all deliverables are on time.</li><li><strong>Coordinate talent &amp; resources</strong> — Source and schedule talent, vendors and crew; assign roles across the in-house team.</li><li><strong>Create clear production briefs</strong> — Translate creative concepts into actionable briefs and detailed shoot lists.</li><li><strong>Oversee on-set logistics</strong> — Ensure smooth shoot-day operations with contingency plans in place.</li><li><strong>Collaborate cross-functionally</strong> — Align with the creative and marketing teams to meet content and campaign goals.</li><li><strong>Problem-solve in real time</strong> — Proactively identify and resolve issues during any phase of production.</li><li><strong>Uphold quality standards</strong> — Review all final outputs to ensure they meet technical and visual benchmarks.</li><li><strong>Design casting call posters</strong> — Create visually appealing posters bi-weekly using Canva or Photoshop.</li><li><strong>Write scripts &amp; copy</strong> — Craft compelling scripts and copy with strong English writing skills.</li><li><strong>Embrace innovation</strong> — Stay ahead of creative trends and experiment with AI tools to improve content execution.</li><li><strong>Drive to shoot locations</strong> — Drive the team to shoot locations, including outstation trips outside Klang Valley.</li><li><strong>Maintain vehicle &amp; petty cash records</strong> — Keep the company vehicle in good order and manage petty cash for the creative team.</li><li><strong>And more</strong> — Other ad-hoc tasks that help the company succeed.</li></ul>
+          <h4>What we&#8217;re looking for</h4>
+          <ul><li><strong>High-achiever mindset</strong> — Strong academic performance — e.g. excellent high school or university results, competition wins, scholarships or Dean&#8217;s List recognition.</li><li><strong>Relevant education</strong> — A BA/BSc in a creative or related field, such as Media, Communications or Film.</li><li><strong>Strong work ethic</strong> — You take ownership, deliver results and hold yourself to high standards.</li><li><strong>Expert planner</strong> — Production success depends on it — you&#8217;re meticulous with timelines, resources and contingencies.</li><li><strong>Sharp time management</strong> — You prioritise well and keep up in a fast-moving production environment.</li><li><strong>Fluent in English</strong> — Clear, confident English, both written and spoken.</li><li><strong>Collaborative communicator</strong> — Great at working in teams, sharing ideas, and giving and receiving feedback.</li><li><strong>Speed with accuracy</strong> — You work quickly without sacrificing quality.</li><li><strong>Fast learner</strong> — Always curious and always improving, especially with new tools and creative methods.</li></ul>
+          <h4>Bonus points</h4>
+          <ul><li><strong>Recent graduate</strong> — Fresh energy and hungry to prove yourself? We love that.</li><li><strong>Lighting know-how</strong> — Familiar with setting up and adjusting lights for shoots.</li><li><strong>Videography &amp; photography</strong> — You understand framing, storytelling and camera operation.</li><li><strong>Premiere Pro editing</strong> — Basic or intermediate video editing skills.</li><li><strong>Creative imagination</strong> — A natural flair for ideas, visual storytelling and content experiments.</li></ul>
+        </div>
+      </details>
+      <a href="#apply" class="apply-role" data-role="Creative Content Producer">Apply now</a>
     </div>
   </div>
 </section>
 
 <section id="apply" style="padding-top:0">
   <div class="wrap">
-    <div class="section-title">Don't see a fit right now? Send us your resume.</div>
-    <p class="track-intro">We're always looking for people who want to build with us. Drop your details below and we'll reach out when a role opens that matches.</p>
+    <div class="section-title">Send us your application.</div>
+    <p class="track-intro">Applying for an open role? Choose it below. Don&#8217;t see a fit yet? Send your resume anyway &mdash; we&#8217;re always looking for people who want to build with us, and we&#8217;ll reach out when a matching role opens.</p>
     <form name="general-application" method="POST" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data" class="contact-form" style="margin-top:8px">
       <input type="hidden" name="form-name" value="general-application">
       <p style="display:none">
@@ -763,6 +790,13 @@
           <label for="ga-last">Last name <span class="req">(required)</span></label>
           <input type="text" id="ga-last" name="lastName" required>
         </div>
+      </div>
+      <div class="form-field">
+        <label for="ga-role">Position <span class="req">(required)</span></label>
+        <select id="ga-role" name="position" required>
+          <option value="General application">General application (no specific role)</option>
+          <option value="Creative Content Producer">Creative Content Producer</option>
+        </select>
       </div>
       <div class="form-field">
         <label for="ga-email">Email <span class="req">(required)</span></label>
@@ -993,6 +1027,9 @@
   btn.addEventListener('click',function(){var o=nav.classList.toggle('open');btn.setAttribute('aria-expanded',o?'true':'false');});
   nav.querySelectorAll('.navlinks a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('open');btn.setAttribute('aria-expanded','false');});});
 })();
+</script>
+<script>
+document.querySelectorAll('.apply-role').forEach(function(a){a.addEventListener('click',function(){var sel=document.getElementById('ga-role');if(sel){sel.value=a.getAttribute('data-role');}});});
 </script>
 </body>
 </html>
