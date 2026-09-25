@@ -365,6 +365,10 @@
   @media (max-width:640px){section[style*="padding-top:0"]{padding-top:56px !important}}
   @media (max-width:760px){.careers .bg{background-position:18% center}}
   .mark{font-family:'Bebas Neue',sans-serif !important;font-weight:400 !important;font-size:24px !important;letter-spacing:.03em !important;line-height:1}
+  .map-embed{position:relative;aspect-ratio:16/11;border:1px solid var(--line);border-radius:6px;overflow:hidden;background:#e8e4dc}
+  .map-embed iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .map-dir{display:inline-block;margin-top:14px;color:var(--copper);font-weight:600;font-size:15px}
+  .map-dir:hover{opacity:.8}
 </style>
 </head>
 <body>
@@ -655,10 +659,10 @@
       </div>
       <div>
         <div class="contact-label">Find us</div>
-        <div class="map-box">
-          <span class="map-pin" aria-hidden="true"></span>
-          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Uptown%203%20Menara%20TH%2C%20Jalan%20SS21%2F39%2C%20Damansara%20Utama%2C%2047400%20Petaling%20Jaya%2C%20Selangor" target="_blank" rel="noopener">Get directions &#8594;</a>
+        <div class="map-embed">
+          <iframe src="https://www.google.com/maps?q=Forward+Pace,+Uptown+3,+Menara+TH,+Jalan+SS21%2F39,+Damansara+Utama,+47400+Petaling+Jaya&z=17&output=embed" title="Forward Pace office on Google Maps" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
         </div>
+        <a class="map-dir" href="https://maps.app.goo.gl/fLGkpDkTsCj3uPqH6" target="_blank" rel="noopener">Get directions &#8594;</a>
       </div>
       <div>
         <div class="contact-label">Hours</div>
