@@ -288,6 +288,7 @@
   .role-card .rdesc{color:var(--sand);font-size:16px;margin-top:16px;max-width:60ch}
   .role-card a{display:inline-block;margin-top:22px;background:var(--copper);color:var(--bg);padding:12px 26px;border-radius:100px;font-size:14.5px;font-weight:600}
   .role-card a:hover{opacity:.88}
+  .role-card .rnote{color:var(--sand);white-space:nowrap}
 
   /* general application */
   .file-field{margin-top:20px}
@@ -427,6 +428,9 @@
   .hero-headline{position:absolute;left:0;right:0;top:33%;z-index:3;display:flex;justify-content:center;padding:0 20px;pointer-events:none}
   .hero .hero-headline h1{margin:0;max-width:none;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-style:normal;text-transform:uppercase;text-align:center;letter-spacing:.01em;line-height:1.02;color:#0B2036;font-size:clamp(28px,4.4vw,72px);text-shadow:0 0 30px rgba(255,255,255,.7)}
   @media (max-width:760px){.hero-headline{top:31%}.hero .hero-headline h1{font-size:clamp(17px,5.2vw,26px);text-shadow:0 0 14px rgba(255,255,255,.9)}}
+  /* frosted light panel behind the hero headline for readability */
+  .hero .hero-headline h1{background:rgba(245,248,251,.72);-webkit-backdrop-filter:blur(8px) saturate(1.1);backdrop-filter:blur(8px) saturate(1.1);padding:.28em .6em .32em;border-radius:6px;box-shadow:0 10px 36px rgba(11,32,54,.22);text-shadow:none}
+  @media (max-width:760px){.hero .hero-headline h1{padding:.3em .65em .34em;border-radius:4px;text-shadow:none}}
   /* keep titles clear of the sticky menu when jumping to a section */
   html{scroll-padding-top:68px !important}
   @media (max-width:760px){html{scroll-padding-top:54px !important}}
@@ -777,23 +781,33 @@
     <div class="role-grid">
     <div class="role-card">
       <div class="rtitle">Creative Content Producer</div>
-      <div class="rsalary">Starting from RM 3,200 / month</div>
+      <div class="rsalary">Starting from RM 3,200 / month <span class="rnote">(starting base, before bonus)</span></div>
       <a href="#apply" class="apply-role" data-role="Creative Content Producer">Apply now</a>
     </div>
     <div class="role-card">
+      <div class="rtitle">Creative Strategist</div>
+      <div class="rsalary">Starting from RM 3,200 / month <span class="rnote">(starting base, before bonus)</span></div>
+      <a href="#apply" class="apply-role" data-role="Creative Strategist">Apply now</a>
+    </div>
+    <div class="role-card">
+      <div class="rtitle">Video Editor</div>
+      <div class="rsalary">Starting from RM 3,200 / month <span class="rnote">(starting base, before bonus)</span></div>
+      <a href="#apply" class="apply-role" data-role="Video Editor">Apply now</a>
+    </div>
+    <div class="role-card">
+      <div class="rtitle">Videographer</div>
+      <div class="rsalary">Starting from RM 3,200 / month <span class="rnote">(starting base, before bonus)</span></div>
+      <a href="#apply" class="apply-role" data-role="Videographer">Apply now</a>
+    </div>
+    <div class="role-card">
       <div class="rtitle">Ecommerce Marketing Executive</div>
-      <div class="rsalary">Starting from RM 3,200 / month</div>
+      <div class="rsalary">Starting from RM 3,200 / month <span class="rnote">(starting base, before bonus)</span></div>
       <a href="#apply" class="apply-role" data-role="Ecommerce Marketing Executive">Apply now</a>
     </div>
     <div class="role-card">
       <div class="rtitle">Supply Chain &amp; Operations Executive</div>
-      <div class="rsalary">Starting from RM 3,200 / month</div>
+      <div class="rsalary">Starting from RM 3,200 / month <span class="rnote">(starting base, before bonus)</span></div>
       <a href="#apply" class="apply-role" data-role="Supply Chain &amp; Operations Executive">Apply now</a>
-    </div>
-    <div class="role-card">
-      <div class="rtitle">Video Editor &amp; Videographer (Creative Strategist)</div>
-      <div class="rsalary">Starting from RM 3,200 / month</div>
-      <a href="#apply" class="apply-role" data-role="Video Editor &amp; Videographer (Creative Strategist)">Apply now</a>
     </div>
     </div>
   </div>
@@ -823,9 +837,11 @@
         <select id="ga-role" name="position" required>
           <option value="General application">General application (no specific role)</option>
           <option value="Creative Content Producer">Creative Content Producer</option>
+          <option value="Creative Strategist">Creative Strategist</option>
+          <option value="Video Editor">Video Editor</option>
+          <option value="Videographer">Videographer</option>
           <option value="Ecommerce Marketing Executive">Ecommerce Marketing Executive</option>
           <option value="Supply Chain &amp; Operations Executive">Supply Chain &amp; Operations Executive</option>
-          <option value="Video Editor &amp; Videographer (Creative Strategist)">Video Editor &amp; Videographer (Creative Strategist)</option>
         </select>
       </div>
       <div class="form-field">
