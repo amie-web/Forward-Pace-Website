@@ -1,0 +1,4 @@
+# Photos are named by their content, so a changed photo always gets a new name.
+# That makes it safe for browsers to keep them for a year.
+/images/*
+  Cache-Control: public, max-age=31536000, immutable
